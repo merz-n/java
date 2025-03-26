@@ -44,22 +44,28 @@ public class HomeWorkApp {
 
         if(c >= 0) {
             System.out.println("The sum is positive = " + c);
-        }else System.out.println("The sum is negativ = "+ c);
+        }
+        else System.out.println("The sum is negativ = "+ c);
     }
     //Третье задание
     public static void printColor()  {
         int value = -40;
         if(value <= 0) {
             System.out.println("Red");
-        } else if (value > 0 && value <= 100) {
+        }
+        else if (value > 0 && value <= 100) {
             System.out.println("Yellow");
-        } else System.out.println("Green");
+        }
+        else System.out.println("Green");
     }
     //Четвертое задание
     public static void compareNumbers()  {
         int a = -40;
         int b = 40;
-        if(a >= b){System.out.println("a >= b");}else{System.out.println("a < b");}
+        if(a >= b){
+            System.out.println("a >= b");
+        }else{System.out.println("a < b");
+        }
     }
     //Пятое задание
     public static boolean number(Scanner scanner) {

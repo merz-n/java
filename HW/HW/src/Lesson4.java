@@ -37,6 +37,10 @@ public class Lesson4 {
         System.out.println("Task6: ");
         taskSixth(scanner);
 
+        //Cедьмое задание
+        System.out.println("Task7: ");
+        taskSeventy(scanner);
+
         scanner.close();
     }
 
@@ -60,7 +64,6 @@ public class Lesson4 {
         int[] arr1 = new int[100];
         for(int i = 0; i < 100; i++) {
                 arr1[i] = i+1;
-
                 System.out.println("arr[" + i + "] = " + arr1[i]);
             }
         }
@@ -71,7 +74,6 @@ public class Lesson4 {
             if (arr3[i]<6){
                 arr3[i] *= 2;
             }
-
         }
     }
     //Четвертое задание
@@ -94,8 +96,6 @@ public class Lesson4 {
                 }
                 System.out.println();
             }
-
-
     }
 
     //Пятое задание
@@ -142,6 +142,30 @@ public class Lesson4 {
 
         }
         System.out.println("Max: " + max);
-        System.out.println("Max: " + min);
+        System.out.println("Min: " + min);
+    }
+    //седьмое задание
+    public static void taskSeventy(Scanner scanner) {
+        System.out.print("Enter the length of the array: ");
+        int k = scanner.nextInt();
+
+        Random random = new Random();
+        int[] array6 = new int[k];
+
+        for (int i = 0; i < k; i++) {
+            array6[i] = random.nextInt(1000);
+        }
+        for (int n : array6) {
+            System.out.print(n + " ");
+        }
+        System.out.println();
+        int sec = array6[0];
+        int last = array6[array6.length - 1];
+        System.out.println(sec);
+        System.out.println(last);
+        for (int n : array6){
+
+        }
+
     }
 }
