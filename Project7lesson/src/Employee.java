@@ -1,9 +1,9 @@
 public class Employee {
-    private String nameFull;
-    private String position;
-    private String email;
-    private String phone;
-    private int age;
+    private final String nameFull;
+    private final String position;
+    private final String email;
+    private final String phone;
+    private final int age;
 
 
     public Employee(String nameFull, String position, String email, String phone, int age) {
