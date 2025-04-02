@@ -31,6 +31,7 @@ public class Symbolsstring {
         System.out.println("Enter string: ");
         String pol = scanner.nextLine();
         System.out.println("Antwort: " + isPalindrome(pol));
+        System.out.println("5 ");
 
 
         scanner.close();
