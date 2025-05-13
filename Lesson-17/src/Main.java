@@ -1,0 +1,55 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("______________________ Number 1: ___________________");
+        System.out.println("___ 1 ___");
+        Integer[] ersteExampl = {2, 1, 4, 3, 6, 5, 7};
+        String[] zweiteExampl = {"one", "two", "three", "four", "five", "six", "seven"};
+        System.out.println("Array: " + Arrays.toString(ersteExampl));
+        MethodsArrays.swapPairs(ersteExampl);
+        System.out.println("New Array: " + Arrays.toString(ersteExampl));
+        System.out.println("Array: " + Arrays.toString(zweiteExampl));
+        MethodsArrays.swapPairs(zweiteExampl);
+        System.out.println("New Array: " + Arrays.toString(zweiteExampl));
+        System.out.println("___ 2 ___");
+        List<Integer> list = MethodsArrays.listArray(ersteExampl);
+        System.out.println("List: " + list);
+        list.add(1);
+        list.remove(3);
+        System.out.println("New list: " + list);
+        System.out.println("______________________ Number 2: ___________________");
+        Box<Apple> aplleBox = new Box<Apple>();
+        Box<Apple> aplleBox1 = new Box<Apple>();
+        Box<Apple> aplleBox2 = new Box<Apple>();
+        Box<Orange> orangeBox = new Box<Orange>();
+        Box<Orange> orangeBox1 = new Box<Orange>();
+        Apple apple = new Apple();
+        Apple apple1 = new Apple();
+        Apple apple2 = new Apple();
+        Orange orange = new Orange();
+        Orange orange1 = new Orange();
+        Orange orange2 = new Orange();
+        aplleBox.add(apple);
+        aplleBox.add(apple1);
+        aplleBox.add(apple2);
+        aplleBox2.add(apple);
+        aplleBox2.add(apple1);
+        aplleBox2.add(apple2);
+        orangeBox.add(orange);
+        orangeBox.add(orange1);
+        orangeBox.add(orange2);
+        System.out.println("Method getWeight(): Aplle box with fruits- " + aplleBox.getWeight() + " a box without fruits: " + aplleBox1.getWeight());
+        System.out.println("Method getWeight(): Orange box with fruits- " + orangeBox.getWeight() + " a box without fruits: " + orangeBox1.getWeight());
+        System.out.println("Method compare(): _ if the boxes are equal - true, else - false _");
+        System.out.println("aplleBox-aplleBox2: " + aplleBox.compare(aplleBox2));
+        System.out.println("aplleBox-orangeBox: " + aplleBox.compare(orangeBox));
+        System.out.println("orangeBox- aplleBox: " + orangeBox.compare(aplleBox));
+        System.out.println("orangeBox- aplleBox1: " + orangeBox.compare(aplleBox1));
+        System.out.println("Method transfer(): ");
+        System.out.println("Method getWeight(): Aplle box " + aplleBox.getWeight() + " new box " + aplleBox1.getWeight());
+        aplleBox.transfer(aplleBox1);
+        System.out.println("Method getWeight(): Aplle box " + aplleBox.getWeight() + " new box " + aplleBox1.getWeight());
+    }
+}
