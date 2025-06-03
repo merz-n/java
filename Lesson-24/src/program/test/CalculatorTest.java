@@ -88,5 +88,19 @@ public class CalculatorTest {
     public void testRecursiveNulls() {
         Assertions.equalRecursively(null, null);
     }
+    @Test
+    public void testArrayContainsSubarrayFailure(){
+        Integer[] array = {5, 9, 1, 2, 4, 10};
+        Integer[] subarray = {1, 2, 3};
+
+        Assertions.contain(array,subarray);
+    }
+    @Test
+    public void testArrayContainsSubarraySuccess() {
+        Integer[] array1 = {5, 9, 1, 2, 3, 10};
+        Integer[] subarray1 = {1, 2, 3};
+
+        Assertions.contain(array1, subarray1);
+    }
 
 }

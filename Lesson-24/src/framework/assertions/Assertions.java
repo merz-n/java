@@ -66,6 +66,29 @@ public class Assertions {
         if(!expected.equals(actual)){
             throw new AssertException(new AssertResult<>(false,expected,actual));
         }
+    }
+    public static <T> void contain(T[] current, T[] toContain){
+        if (current == null || toContain == null || toContain.length > current.length) {
+            throw new AssertException(new AssertResult<>(false, toContain, current));
+        }
+        boolean found = false;
+        for(int i = 0; i <= current.length -toContain.length; i++){
+            boolean match = true;
+            for (int j = 0; j < toContain.length; j++) {
+                if (!current[i + j].equals(toContain[j])) {
+                    match = false;
+                    break;
+                }
+            }
+            if(match) {
+                found = true;
+                break;
+            }
+            if(!found){
+                throw new AssertException(new AssertResult<>(false, toContain, current));
+            }
+
+        }
 
     }
 }
