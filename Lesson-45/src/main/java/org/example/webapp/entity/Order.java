@@ -2,6 +2,8 @@ package org.example.webapp.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Entity
 @Table(name = "orders")
 public class Order {
@@ -71,5 +73,17 @@ public class Order {
                 ", amount='" + amount + '\'' +
                 ", currency='" + currency + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Order order = (Order) o;
+        return Objects.equals(id, order.id) && Objects.equals(name, order.name) && Objects.equals(amount, order.amount) && Objects.equals(currency, order.currency);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, amount, currency);
     }
 }
